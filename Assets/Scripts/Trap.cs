@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Trap : MonoBehavior
+public class Trap : MonoBehaviour
 {
      bool active = true;
     
