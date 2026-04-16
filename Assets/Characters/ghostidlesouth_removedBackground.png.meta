@@ -262,6 +262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: ghostidlesouth_removedBackground_4
       rect:
         serializedVersion: 2
@@ -284,6 +285,8 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+=======
+>>>>>>> 6f72bd9a840ff84a6ad1635426fa3cb2a80f45c3
       name: ghostidlesouth_removedBackground_7
       rect:
         serializedVersion: 2
@@ -547,6 +550,7 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+<<<<<<< HEAD
     - serializedVersion: 2
       name: ghostidlesouth_removedBackground_1
       rect:
@@ -569,11 +573,17 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+>>>>>>> 6f72bd9a840ff84a6ad1635426fa3cb2a80f45c3
     outline: []
     customData: 
     physicsShape: []
     bones: []
+<<<<<<< HEAD
     spriteID: 4160913f03adf5d43b73f127b5e61df0
+=======
+    spriteID: 014b28976ed9a0e44b4affc5a306cf87
+>>>>>>> 6f72bd9a840ff84a6ad1635426fa3cb2a80f45c3
     internalID: 0
     vertices: []
     indices: 
