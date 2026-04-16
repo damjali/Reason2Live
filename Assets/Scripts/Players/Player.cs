@@ -4,6 +4,12 @@ namespace Players
 {
     public class Player  : MonoBehaviour
     {
+        
+        public bool haveUp {get; set;}
+        public bool haveDown{get;set;}
+        public bool haveLeft{get;set;}
+        public bool haveRight{get;set;}
+        
         public float moveSpeed = 5f;
         public Rigidbody2D rb;
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6561166154922932107}
   - component: {fileID: 4423827240146840615}
   - component: {fileID: -656510477795341519}
+  - component: {fileID: 7924697717143801402}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -172,3 +173,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Players.Player2
   moveSpeed: 10
   rb: {fileID: 6561166154922932107}
+--- !u!95 &7924697717143801402
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406747908919652853}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b57f462d8d1c0f40ab54a165d80d279, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
