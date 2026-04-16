@@ -16,7 +16,7 @@ public class Player2Movement : MonoBehaviour
     void Update()
     {
         // Movement is updated here based on the most recent input
-        rb.velocity = moveInput * moveSpeed;
+        rb.linearVelocity = moveInput * moveSpeed;
     }
 
     // This must match the signature required by the Player Input component
