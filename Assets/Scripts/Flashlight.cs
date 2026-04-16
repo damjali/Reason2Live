@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Flashlight : MonoBehaviour
 {
     [Header("Component")]
-    public Light2D myLight;
+    private Light2D myLight;
     public Slider batteryBar;
 
     [Header("Battery Settings")]
@@ -19,6 +19,7 @@ public class Flashlight : MonoBehaviour
 
     void Start()
     {
+        myLight = transform.GetChild(0).GetComponent<Light2D>();
         // 1. MULA DARI FULL (Start from full)
         currentBattery = maxBattery;
 

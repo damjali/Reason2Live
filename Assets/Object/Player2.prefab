@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2688089215141157447}
   - component: {fileID: 6250350392976705117}
   m_Layer: 0
-  m_Name: Spot Light 2D
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +258,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Players.Player2
   moveSpeed: 10
-  rb: {fileID: 6561166154922932107}
 --- !u!114 &9071019748285716908
 MonoBehaviour:
   m_ObjectHideFlags: 0
