@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
-using System.Linq; // Added for sorting
+using System.Linq;
 
 public class Enemy : MonoBehaviour
 {
@@ -20,8 +20,11 @@ public class Enemy : MonoBehaviour
 
     [Header("Intelligence Settings")]
     [Range(0f, 1f)]
-    [Tooltip("0 = Perfect path, 1 = More likely to take side-routes")]
     public float curiosity = 0.3f; 
+
+    [Header("Spawn Settings")]
+    private float originX;
+    private float originY;
 
     private Vector3 currentTargetWithJitter;
     private bool[,] grid;
@@ -30,11 +33,24 @@ public class Enemy : MonoBehaviour
     private int pathIndex;
     private float timer;
     private float individualSpeed;
+    private Rigidbody2D rb;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        originX = rb.position.x;
+        originY = rb.position.y;
         if (wallTilemap != null) CreateGridFromTilemap();
+        
         individualSpeed = speed + Random.Range(-0.5f, 0.5f);
+
+        // Optional: If originX/Y are 0, save the current position as origin
+        if (originX == 0 && originY == 0)
+        {
+            Vector2Int startGrid = WorldToGrid(transform.position);
+            originX = startGrid.x;
+            originY = startGrid.y;
+        }
     }
 
     void CreateGridFromTilemap()
@@ -56,12 +72,14 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if (player == null || grid == null) return;
+
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
             GeneratePath();
             timer = pathUpdateRate + Random.Range(-0.05f, 0.05f);
         }
+
         FollowPath();
     }
 
@@ -70,11 +88,16 @@ public class Enemy : MonoBehaviour
         Vector2Int start = WorldToGrid(transform.position);
         Vector2Int playerGridPos = WorldToGrid(player.position);
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        
-        // Target is either player or a slightly spread out tile
+    
         Vector2Int finalTarget = (distanceToPlayer <= lockOnDistance) 
             ? playerGridPos 
             : GetRandomizedTarget(playerGridPos);
+
+        if (start == finalTarget)
+        {
+            currentPath.Clear();
+            return;
+        }
 
         Queue<Vector2Int> queue = new Queue<Vector2Int>();
         queue.Enqueue(start);
@@ -86,7 +109,6 @@ public class Enemy : MonoBehaviour
             Vector2Int curr = queue.Dequeue();
             if (curr == finalTarget) break;
 
-            // SMART SHUFFLE: Instead of skipping, we just change the order we check neighbors
             foreach (Vector2Int neighbor in GetSmartNeighbors(curr, finalTarget))
             {
                 if (grid[neighbor.x, neighbor.y] && !parentMap.ContainsKey(neighbor))
@@ -101,15 +123,16 @@ public class Enemy : MonoBehaviour
 
         currentPath.Clear();
         Vector2Int temp = finalTarget;
+    
         while (temp != start)
         {
             currentPath.Add(temp);
             temp = parentMap[temp];
         }
         currentPath.Reverse();
-        
+    
         pathIndex = 0;
-        UpdateJitteredTarget();
+        if (currentPath.Count > 0) UpdateJitteredTarget();
     }
 
     IEnumerable<Vector2Int> GetSmartNeighbors(Vector2Int current, Vector2Int target)
@@ -120,11 +143,8 @@ public class Enemy : MonoBehaviour
             current + Vector2Int.left, current + Vector2Int.right 
         };
 
-        // If 'curiosity' is high, we occasionally shuffle. 
-        // Otherwise, we keep them sorted by distance to target.
         if (Random.value < curiosity)
         {
-            // Random shuffle to allow "imperfect" but logical paths
             for (int i = neighbors.Count - 1; i > 0; i--)
             {
                 int r = Random.Range(0, i + 1);
@@ -133,7 +153,6 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            // Sort by distance so they always try the most direct neighbor first
             neighbors = neighbors.OrderBy(n => Vector2Int.Distance(n, target)).ToList();
         }
 
@@ -144,11 +163,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // --- Rest of the movement logic (Jitter, FollowPath, etc.) ---
     void FollowPath()
     {
-        if (currentPath.Count == 0 || pathIndex >= currentPath.Count) return;
+        // Safety: Don't move if there's no path
+        if (currentPath == null || currentPath.Count == 0 || pathIndex >= currentPath.Count) return;
+
         transform.position = Vector3.MoveTowards(transform.position, currentTargetWithJitter, individualSpeed * Time.deltaTime);
+        
         if (Vector2.Distance(transform.position, currentTargetWithJitter) < 0.15f)
         {
             pathIndex++;
@@ -158,12 +179,44 @@ public class Enemy : MonoBehaviour
 
     void UpdateJitteredTarget()
     {
+        if (currentPath.Count == 0 || pathIndex >= currentPath.Count) return;
+
         Vector3 rawCenter = GridToWorld(currentPath[pathIndex]);
         float currentDist = Vector2.Distance(transform.position, player.position);
         float jitter = (currentDist > lockOnDistance) ? randomJitter : 0.05f;
         currentTargetWithJitter = rawCenter + new Vector3(Random.Range(-jitter, jitter), Random.Range(-jitter, jitter), 0);
     }
 
+    public void reset()
+    {
+        // 1. Convert origin grid to world position
+        Vector2 worldSpawn = new Vector2(originX, originY);
+
+        // 2. Stop physics momentum immediately
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.position = worldSpawn;
+        }
+
+        // 3. Teleport the transform
+        transform.position = worldSpawn;
+
+        // 4. Wipe the AI's memory of its old path
+        clearPath();
+        
+        Debug.Log(gameObject.name + " reset successfully.");
+    }
+
+    private void clearPath()
+    {
+        currentPath.Clear();
+        pathIndex = 0;
+        timer = 0; // Forces GeneratePath() to run on the next Update()
+    }
+
+    // Helper Functions
     Vector2Int GetRandomizedTarget(Vector2Int baseTarget)
     {
         Vector2Int pot = baseTarget + new Vector2Int(Random.Range(-targetSpread, targetSpread + 1), Random.Range(-targetSpread, targetSpread + 1));

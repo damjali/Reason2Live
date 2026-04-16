@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Players;
 using UnityEngine;
 
@@ -5,7 +6,32 @@ public class LevelManager : MonoBehaviour
 {
     public Player1 player1;
     public Player2 player2;
+    public List<Enemy> enemies;
+
+    void Start()
+    {
+        foreach (Enemy e in enemies)
+        {
+            e.GetComponent<DeathArea>().levelManager = this;
+        }
+    }
     void Update()
+    {
+        UpdatePlayerInput();
+        
+    }
+
+    public void resetLevel()
+    {
+        player1.reset();
+        player2.reset();
+        foreach (Enemy e in enemies)
+        {
+            e.reset();
+        }
+    }
+    
+    private async void UpdatePlayerInput()
     {
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift) && player1.haveLeft)
         {
@@ -54,6 +80,5 @@ public class LevelManager : MonoBehaviour
             player2.haveDown = false;
             player1.haveDown = true;
         }
-        
     }
 }
