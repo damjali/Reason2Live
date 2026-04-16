@@ -226,7 +226,7 @@ TextureImporter:
         width: 70
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,50 +240,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_1
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 360
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0e28e88051ef10ab0800000000000000
-      internalID: -5043470741386919200
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_2
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 357
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d61395494fd0a320800000000000000
-      internalID: 2567297293394056916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ghostidlesouth_removedBackground_3
       rect:
         serializedVersion: 2
@@ -292,7 +248,7 @@ TextureImporter:
         width: 85
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -310,11 +266,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 534
-        y: 185
+        y: 269
         width: 91
-        height: 179
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,50 +284,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_5
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 333
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88094d743d8155e60800000000000000
-      internalID: 7950288012914757768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_6
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 338
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bcc8406a596999370800000000000000
-      internalID: 8329854555278052555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ghostidlesouth_removedBackground_7
       rect:
         serializedVersion: 2
@@ -380,7 +292,7 @@ TextureImporter:
         width: 74
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -394,72 +306,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_8
-      rect:
-        serializedVersion: 2
-        x: 217
-        y: 340
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b7de7c3d8af19d280800000000000000
-      internalID: -9018141968864645765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_9
-      rect:
-        serializedVersion: 2
-        x: 217
-        y: 333
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e352309d24738ff0800000000000000
-      internalID: -35056633047264283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_10
-      rect:
-        serializedVersion: 2
-        x: 286
-        y: 328
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08d5f767ce1e90060800000000000000
-      internalID: 6920310708148067712
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ghostidlesouth_removedBackground_11
       rect:
         serializedVersion: 2
@@ -468,7 +314,7 @@ TextureImporter:
         width: 81
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -482,28 +328,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_12
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 258
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f05d8d3232d281ec0800000000000000
-      internalID: -3596074673506822897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ghostidlesouth_removedBackground_13
       rect:
         serializedVersion: 2
@@ -512,7 +336,7 @@ TextureImporter:
         width: 85
         height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -526,28 +350,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_14
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 265
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44e23ad0dbba76f10800000000000000
-      internalID: 2262966166242930244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ghostidlesouth_removedBackground_15
       rect:
         serializedVersion: 2
@@ -556,7 +358,7 @@ TextureImporter:
         width: 84
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -570,50 +372,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_16
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 250
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7cce90f10aa301a90800000000000000
-      internalID: -7345306532851356473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_17
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 244
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b53b570e5647dd870800000000000000
-      internalID: 8709245235310736219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ghostidlesouth_removedBackground_18
       rect:
         serializedVersion: 2
@@ -622,7 +380,7 @@ TextureImporter:
         width: 85
         height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -644,7 +402,7 @@ TextureImporter:
         width: 82
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -666,7 +424,7 @@ TextureImporter:
         width: 82
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -680,28 +438,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_21
-      rect:
-        serializedVersion: 2
-        x: 428
-        y: 179
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 349c508b227382070800000000000000
-      internalID: 8081770153572157763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ghostidlesouth_removedBackground_22
       rect:
         serializedVersion: 2
@@ -710,7 +446,7 @@ TextureImporter:
         width: 84
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -724,116 +460,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_23
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 152
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87f03aee815054bc0800000000000000
-      internalID: -3799625105976127624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_24
-      rect:
-        serializedVersion: 2
-        x: 377
-        y: 152
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70557291b1444dd20800000000000000
-      internalID: 3302339309946230023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_25
-      rect:
-        serializedVersion: 2
-        x: 539
-        y: 154
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e3c21a4702c482ae0800000000000000
-      internalID: -1573924367486604226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_26
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 68
-        width: 10
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cff4f45d3acecf990800000000000000
-      internalID: -7350740303372922884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_27
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 80
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9471f6a6fcffb7550800000000000000
-      internalID: 6159798181668263753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ghostidlesouth_removedBackground_28
       rect:
         serializedVersion: 2
@@ -842,7 +468,7 @@ TextureImporter:
         width: 70
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -864,7 +490,7 @@ TextureImporter:
         width: 87
         height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -886,7 +512,7 @@ TextureImporter:
         width: 84
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -908,7 +534,7 @@ TextureImporter:
         width: 82
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -922,89 +548,23 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_32
+      name: ghostidlesouth_removedBackground_1
       rect:
         serializedVersion: 2
-        x: 124
-        y: 66
-        width: 6
-        height: 7
+        x: 534
+        y: 186
+        width: 91
+        height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fbcaff56fa9d13140800000000000000
-      internalID: 4697775233677896895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_33
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 53
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c54bd83c1c739560800000000000000
-      internalID: 7319330280062010820
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_34
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 46
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3fea91b3e9d6f690800000000000000
-      internalID: -7568622551789015235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_35
-      rect:
-        serializedVersion: 2
-        x: 628
-        y: 13
-        width: 20
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 760ba2ae88da7b400800000000000000
-      internalID: 339931100445585511
+      spriteID: e460c85dc85451140b2054bf02d49936
+      internalID: -5043470741386919200
       vertices: []
       indices: 
       edges: []
@@ -1013,7 +573,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4160913f03adf5d43b73f127b5e61df0
     internalID: 0
     vertices: []
     indices: 
