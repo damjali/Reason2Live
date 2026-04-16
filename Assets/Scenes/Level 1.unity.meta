@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Level 1.unity.meta
 guid: a2f030bd000e6154e989475d3a250f34
+========
+guid: 5f4cbbdcd6f8b074783fc8e11629d7e5
+>>>>>>>> 4c566ab97e754bb05d1093877e1fb34ce4c77174:Assets/Scenes/Adam's Test Scene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
