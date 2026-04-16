@@ -7,3 +7,6 @@ UserSettings/
 /.idea
 Assembly-CSharp.csproj
 Reason2Live.sln
+Reason2Live.slnx
+.vscode/extensions.json
+/.vscode
