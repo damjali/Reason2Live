@@ -262,328 +262,32 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<< HEAD
-      name: ghostidlesouth_removedBackground_4
+      name: 
       rect:
         serializedVersion: 2
-        x: 534
-        y: 269
-        width: 91
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f97e2dcd34c90a3b0800000000000000
-      internalID: -5503226929365194849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-=======
->>>>>>> 6f72bd9a840ff84a6ad1635426fa3cb2a80f45c3
-      name: ghostidlesouth_removedBackground_7
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 269
-        width: 74
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 909b2b3d75381b100800000000000000
-      internalID: 122023078152812809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_11
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 186
-        width: 81
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 93c1e4fc4ab1c9b80800000000000000
-      internalID: -8386798011404116935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_13
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 184
-        width: 85
-        height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4b0724f387be7720800000000000000
-      internalID: 2845913791909530447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_15
-      rect:
-        serializedVersion: 2
-        x: 377
-        y: 186
-        width: 84
-        height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 09fc649a55e1fe430800000000000000
-      internalID: 3814300762667143056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_18
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 94
-        width: 85
-        height: 89
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e23a4c8b7896e6520800000000000000
-      internalID: 2697209258482901806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_19
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 94
-        width: 82
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4bebe0c6b41364dd0800000000000000
-      internalID: -2502258342952517964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_20
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 94
-        width: 82
-        height: 91
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88285fe5403aadb80800000000000000
-      internalID: -8369197718346300792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_22
-      rect:
-        serializedVersion: 2
-        x: 541
-        y: 94
-        width: 84
-        height: 92
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59a0fe747f06e4560800000000000000
-      internalID: 7299878661194189461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_28
-      rect:
-        serializedVersion: 2
-        x: 57
+        x: 0
         y: 0
-        width: 70
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1ee69b9ce59f67f80800000000000000
-      internalID: -8109019893527384351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_29
-      rect:
-        serializedVersion: 2
-        x: 212
-        y: 5
-        width: 87
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43286b5e065067ae0800000000000000
-      internalID: -1552047107853614540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_30
-      rect:
-        serializedVersion: 2
-        x: 377
-        y: 2
-        width: 84
-        height: 91
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 84698b964bc88c7d0800000000000000
-      internalID: -2897911653717207480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_31
-      rect:
-        serializedVersion: 2
-        x: 541
-        y: 0
-        width: 82
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2e3fe74d3fa585be0800000000000000
-      internalID: -1488339673557306398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-<<<<<<< HEAD
-    - serializedVersion: 2
-      name: ghostidlesouth_removedBackground_1
-      rect:
-        serializedVersion: 2
-        x: 534
-        y: 186
-        width: 91
-        height: 83
+        width: 0
+        height: 0
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e460c85dc85451140b2054bf02d49936
-      internalID: -5043470741386919200
+      spriteID: 5e97eb03825dee720800000000000000
+      internalID: 2877471580529523173
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
->>>>>>> 6f72bd9a840ff84a6ad1635426fa3cb2a80f45c3
     outline: []
     customData: 
     physicsShape: []
     bones: []
-<<<<<<< HEAD
-    spriteID: 4160913f03adf5d43b73f127b5e61df0
-=======
-    spriteID: 014b28976ed9a0e44b4affc5a306cf87
->>>>>>> 6f72bd9a840ff84a6ad1635426fa3cb2a80f45c3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -593,42 +297,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      : 2877471580529523173
       ghostidlesouth_removedBackground_0: -2769795520705239046
-      ghostidlesouth_removedBackground_1: -5043470741386919200
-      ghostidlesouth_removedBackground_10: 6920310708148067712
-      ghostidlesouth_removedBackground_11: -8386798011404116935
-      ghostidlesouth_removedBackground_12: -3596074673506822897
-      ghostidlesouth_removedBackground_13: 2845913791909530447
-      ghostidlesouth_removedBackground_14: 2262966166242930244
-      ghostidlesouth_removedBackground_15: 3814300762667143056
-      ghostidlesouth_removedBackground_16: -7345306532851356473
-      ghostidlesouth_removedBackground_17: 8709245235310736219
-      ghostidlesouth_removedBackground_18: 2697209258482901806
-      ghostidlesouth_removedBackground_19: -2502258342952517964
-      ghostidlesouth_removedBackground_2: 2567297293394056916
-      ghostidlesouth_removedBackground_20: -8369197718346300792
-      ghostidlesouth_removedBackground_21: 8081770153572157763
-      ghostidlesouth_removedBackground_22: 7299878661194189461
-      ghostidlesouth_removedBackground_23: -3799625105976127624
-      ghostidlesouth_removedBackground_24: 3302339309946230023
-      ghostidlesouth_removedBackground_25: -1573924367486604226
-      ghostidlesouth_removedBackground_26: -7350740303372922884
-      ghostidlesouth_removedBackground_27: 6159798181668263753
-      ghostidlesouth_removedBackground_28: -8109019893527384351
-      ghostidlesouth_removedBackground_29: -1552047107853614540
       ghostidlesouth_removedBackground_3: -1773064324636490400
-      ghostidlesouth_removedBackground_30: -2897911653717207480
-      ghostidlesouth_removedBackground_31: -1488339673557306398
-      ghostidlesouth_removedBackground_32: 4697775233677896895
-      ghostidlesouth_removedBackground_33: 7319330280062010820
-      ghostidlesouth_removedBackground_34: -7568622551789015235
-      ghostidlesouth_removedBackground_35: 339931100445585511
-      ghostidlesouth_removedBackground_4: -5503226929365194849
-      ghostidlesouth_removedBackground_5: 7950288012914757768
-      ghostidlesouth_removedBackground_6: 8329854555278052555
-      ghostidlesouth_removedBackground_7: 122023078152812809
-      ghostidlesouth_removedBackground_8: -9018141968864645765
-      ghostidlesouth_removedBackground_9: -35056633047264283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
