@@ -19,7 +19,7 @@ public class Flashlight : MonoBehaviour
 
     void Start()
     {
-        myLight = transform.GetChild(0).GetComponent<Light2D>();
+        myLight = GetComponentInChildren<Light2D>();
         // 1. MULA DARI FULL (Start from full)
         currentBattery = maxBattery;
 
@@ -56,7 +56,7 @@ public class Flashlight : MonoBehaviour
  
             myLight.pointLightOuterRadius = Mathf.Lerp(minRadius, maxRadius, percentage);
             
-            // Cahaya pun akan perlahan-lahan malap ikut percentage
+            // Cahaya akan malap ikut percentage
             myLight.intensity = Mathf.Lerp(0.1f, 1f, percentage);
         }
 
@@ -69,5 +69,16 @@ public class Flashlight : MonoBehaviour
         {
             batteryBar.value = currentBattery;
         }
+    }
+
+    public void AddBattery(float amount) {
+        currentBattery += amount;
+
+        if (currentBattery > maxBattery) {
+            currentBattery = maxBattery;
+        }
+
+        UpdateLight();
+        UpdateBattery();
     }
 }
