@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2457073827551378511}
   - component: {fileID: 6561166154922932107}
   - component: {fileID: 4423827240146840615}
-  - component: {fileID: -656510477795341519}
+  - component: {fileID: -2011422877721161623}
+  - component: {fileID: -1053318216976406573}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -158,7 +159,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0049230754, y: 0}
   m_Size: {x: 0.99015385, y: 1}
   m_Direction: 0
---- !u!114 &-656510477795341519
+--- !u!114 &-2011422877721161623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,8 +168,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 8406747908919652853}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef6df17dab14af2ba6344b6c62485c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 29993da9250156145a53ea4ba6b929f7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Players.Player2
-  moveSpeed: 5
-  rb: {fileID: 6561166154922932107}
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  wallTilemap: {fileID: 0}
+  player: {fileID: 0}
+  speed: 3
+  pathUpdateRate: 0.3
+  lockOnDistance: 3
+  targetSpread: 2
+  randomJitter: 0.25
+  curiosity: 0.3
+--- !u!114 &-1053318216976406573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406747908919652853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7486ce675f9376d46a96b0a7c9643094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathArea
