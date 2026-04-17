@@ -6,19 +6,20 @@ namespace Players
     {
         [Header("Movement Settings")]
         public float moveSpeed = 5f;
-        
+
         [Header("Abilities")]
-        public bool haveUp { get; set; }
-        public bool haveDown { get; set; }
-        public bool haveLeft { get; set; }
-        public bool haveRight { get; set; }
+        // Changed to public fields so they appear in the Inspector for easy debugging
+        public bool haveUp = true;
+        public bool haveDown = true;
+        public bool haveLeft = true;
+        public bool haveRight = true;
 
         protected Rigidbody2D rb;
-        protected Animator anim; // Reference to the Animator
+        protected Animator anim; 
         protected Vector2 movement;
-        
-        private float originX = 3;
-        private float originY = 3;
+
+        private float originX;
+        private float originY;
         private bool originSaved = false;
 
         protected virtual void Awake()
@@ -29,41 +30,37 @@ namespace Players
 
         public virtual void Update()
         {
-            // Capture starting position once
             if (!originSaved)
             {
                 originX = transform.position.x;
                 originY = transform.position.y;
                 originSaved = true;
-                Debug.Log($"Origin captured at: {originX}, {originY}");
             }
 
-            // Reset movement each frame before Player1 adds input
+            // Reset movement vector every frame
             movement = Vector2.zero;
         }
 
         protected virtual void FixedUpdate()
         {
-            // Apply movement physics
-            rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+            // Move the Rigidbody
+            if (movement.sqrMagnitude > 0)
+            {
+                rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+            }
         }
 
-        /// <summary>
-        /// Updates Animator parameters based on current movement vector.
-        /// </summary>
         protected void UpdateAnimations()
         {
             if (anim != null)
             {
-                // Check if the player is currently providing input
                 bool isMoving = movement.sqrMagnitude > 0;
-                
-                // Set the Boolean to switch between Idle and Walk states
                 anim.SetBool("IsMoving", isMoving);
 
+                // IMPORTANT: Only update MoveX and MoveY if we are actually moving
+                // This allows the Blend Tree to stay in the last faced direction when idle
                 if (isMoving)
                 {
-                    // Update the Blend Tree coordinates
                     anim.SetFloat("MoveX", movement.x);
                     anim.SetFloat("MoveY", movement.y);
                 }
@@ -71,11 +68,6 @@ namespace Players
         }
 
         public void reset()
-        {
-            resetPosition();
-        }
-
-        private void resetPosition()
         {
             rb.position = new Vector2(originX, originY);
         }
