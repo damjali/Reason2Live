@@ -4,9 +4,10 @@ namespace Players
 {
     public class Player1 : Player
     {
-        // Use Start to initialize abilities for this specific player
-        public void Start()
+        // Start is used for initialization
+        void Start()
         {
+            // Ensure abilities are active
             haveDown = true;
             haveLeft = true;
             haveRight = true;
@@ -15,10 +16,10 @@ namespace Players
 
         public override void Update()
         {
-            // 1. Run the base Update to reset movement and check origin
+            // 1. Reset movement vector in base class
             base.Update();
 
-            // 2. Capture Keyboard Input
+            // 2. Capture Keyboard Input (WASD)
             if (Input.GetKey(KeyCode.A) && haveLeft)
                 movement.x = -1;
             else if (Input.GetKey(KeyCode.D) && haveRight)
@@ -29,7 +30,7 @@ namespace Players
             else if (Input.GetKey(KeyCode.S) && haveDown)
                 movement.y = -1;
 
-            // 3. Sync the visual animations with the movement
+            // 3. Update the animator parameters
             UpdateAnimations();
         }
     }
