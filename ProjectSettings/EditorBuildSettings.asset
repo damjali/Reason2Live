@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Died Page.unity
     guid: dd2af5417da74234b8c8af9528d25eb7
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 59f27a6e4a273e9429da057215c56002
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
