@@ -3,6 +3,8 @@ namespace Players
 {
     public class Player2 : Player
     {
+        public bool scared { get; set; } = false;
+
         public void Start()
         {
             haveDown = false;
@@ -13,6 +15,10 @@ namespace Players
         
         public override void Update()
         {
+            if (scared)
+            {
+                return;
+            }
             base.Update();
             if (Input.GetKey(KeyCode.LeftArrow) && haveLeft)
                 movement.x = -1;
@@ -22,6 +28,12 @@ namespace Players
                 movement.y = 1;
             if (Input.GetKey(KeyCode.DownArrow) && haveDown)
                 movement.y = -1;
+        }
+
+        public void scare()
+        {
+            scared = true;
+            rb.linearVelocity = Vector2.zero; // Stop movement immediately
         }
     }
 }
