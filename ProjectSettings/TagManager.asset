@@ -51,6 +51,9 @@ TagManager:
   - name: Ground Charachter
     uniqueID: 81157963
     locked: 0
+  - name: New Layer 3
+    uniqueID: 3302308927
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []
