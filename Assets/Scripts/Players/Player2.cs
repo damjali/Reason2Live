@@ -33,5 +33,11 @@ namespace Players
             // 3. Update the animator parameters
             UpdateAnimations();
         }
+
+        public void scare()
+        {
+            scared = true;
+            rb.linearVelocity = Vector2.zero; // Stop movement immediately
+        }
     }
 }
