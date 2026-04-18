@@ -9,7 +9,7 @@ public class MonsterBlink : MonoBehaviour
 
     [Header("Blink Settings")]
     public float fadeDuration = 0.8f; // How long it takes to fade out
-    public float normalIntensity = 5f;
+    public float normalIntensity = 0f;
     public float dimIntensity = 0f;
 
     void Awake()
@@ -30,7 +30,7 @@ public class MonsterBlink : MonoBehaviour
             StopCoroutine(blinkCoroutine);
             blinkCoroutine = null;
         }
-        monsterLight.intensity = normalIntensity;
+        monsterLight.intensity = 0f;
     }
 
     private IEnumerator FadeRoutine()
