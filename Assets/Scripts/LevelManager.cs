@@ -27,6 +27,7 @@ public class LevelManager : MonoBehaviour
         player2.reset();
         foreach (Enemy e in enemies)
         {
+            print("Resetting enemy: " + e);
             e.reset();
         }
     }

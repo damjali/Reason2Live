@@ -34,12 +34,15 @@ public class Enemy : MonoBehaviour
     private float timer;
     private float individualSpeed;
     private Rigidbody2D rb;
+    private bool originSaved = false;
+
+    void Awake(){
+         rb = GetComponent<Rigidbody2D>();
+    }
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        originX = rb.position.x;
-        originY = rb.position.y;
+       
         if (wallTilemap != null) CreateGridFromTilemap();
         
         individualSpeed = speed + Random.Range(-0.5f, 0.5f);
@@ -71,6 +74,12 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (!originSaved)
+            {
+                originX = transform.position.x;
+                originY = transform.position.y;
+                originSaved = true;
+            }
         if (player == null || grid == null) return;
 
         timer -= Time.deltaTime;
