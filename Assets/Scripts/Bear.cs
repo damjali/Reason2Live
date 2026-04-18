@@ -59,7 +59,7 @@ public class Bear : MonoBehaviour
         {
             target = exit;
         }
-       
+        print(target)
         if (wallTilemap != null) CreateGridFromTilemap();
         
         individualSpeed = speed + Random.Range(-0.5f, 0.5f);
