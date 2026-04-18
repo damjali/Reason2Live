@@ -25,6 +25,7 @@ public class AudioManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
+            
     }
 
     // --- UI TOGGLE METHOD ---
