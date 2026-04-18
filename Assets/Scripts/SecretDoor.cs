@@ -23,7 +23,7 @@ public class SecretDoor : MonoBehaviour
 
         if (p1Pass && p2Pass)
         {
-            SceneManager.LoadScene("Scenes/End Page");
+            SceneManager.LoadScene("Scenes/EndingScene");
         }
     }
 }
