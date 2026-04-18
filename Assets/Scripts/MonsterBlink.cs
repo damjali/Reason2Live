@@ -39,6 +39,7 @@ public class MonsterBlink : MonoBehaviour
         {
             // 1. Instant "Pop" to full brightness
             monsterLight.intensity = normalIntensity;
+            
 
             // 2. Slow Fade Out
             float elapsed = 0f;
