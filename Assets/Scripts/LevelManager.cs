@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public List<Bear> bears;
     private List<MonsterBlink> monsterBlinks = new List<MonsterBlink>();
     public GameObject secretDoor;
+    public Lvl1Canvas canvas;
 
     void Start()
     {
@@ -110,6 +111,7 @@ public class LevelManager : MonoBehaviour
     public void spawnExit()
     {
         print("spawm");
+        canvas.TriggerPopup();
         Instantiate(secretDoor, new Vector2((float)-10.48, (float)-27.7), Quaternion.identity);
     }
 }
