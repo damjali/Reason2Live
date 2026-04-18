@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-    
+
     void Start()
     {
         if (wallTilemap != null) CreateGridFromTilemap();
