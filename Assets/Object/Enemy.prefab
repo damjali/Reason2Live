@@ -157,9 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c44f590f23e11f44a9c207f85037a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterBlink
-  blinkInterval: 0.2
+  fadeDuration: 0.8
   normalIntensity: 5
-  blinkIntensity: 0
+  dimIntensity: 0
 --- !u!1 &2126055390282240417
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +196,9 @@ Transform:
   m_LocalPosition: {x: -8.76, y: 3.05, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5942804263000915387}
+  - {fileID: 4206673041842157330}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7569647890188603647
@@ -246,7 +248,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6547391175039008932, guid: 7e4effe7fca9b324db7074eb767706b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
