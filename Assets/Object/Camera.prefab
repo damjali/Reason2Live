@@ -70,7 +70,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 21.028305
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 0}
-  minX: 0
-  maxX: 0
-  minY: 0
-  maxY: 0
-  smoothSpeed: 5
+  minX: 1000000
+  maxX: 1000000
+  minY: 1000000
+  maxY: 1000000
+  smoothSpeed: 1000000
