@@ -48,7 +48,6 @@ public class Bear : MonoBehaviour
     
     void Start()
     {
-        // Target selection logic: 50/50 chance between a random enemy or the exit
         int r1 = Random.Range(0, 2);
         
         if (r1 == 0 && levelManager != null && levelManager.enemies.Count > 0)
@@ -64,7 +63,6 @@ public class Bear : MonoBehaviour
         
         individualSpeed = speed + Random.Range(-0.5f, 0.5f);
 
-        // Save original position for reset logic
         if (!originSaved)
         {
             originX = transform.position.x;
@@ -91,7 +89,6 @@ public class Bear : MonoBehaviour
 
     void Update()
     {
-        // Only run logic if the player has triggered the movement
         if (!move) return;
         
         if (target == null || grid == null) return;
@@ -168,7 +165,6 @@ public class Bear : MonoBehaviour
 
         if (Random.value < curiosity)
         {
-            // Shuffle neighbors for "curious" exploration
             for (int i = neighbors.Count - 1; i > 0; i--)
             {
                 int r = Random.Range(0, i + 1);
@@ -177,7 +173,6 @@ public class Bear : MonoBehaviour
         }
         else
         {
-            // Sort by distance to target for efficient chasing
             neighbors = neighbors.OrderBy(n => Vector2Int.Distance(n, target)).ToList();
         }
 
@@ -223,7 +218,7 @@ public class Bear : MonoBehaviour
         }
 
         transform.position = worldSpawn;
-        move = false; // Stop movement on reset
+        move = false; 
         clearPath();
     }
 
@@ -256,17 +251,21 @@ public class Bear : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        // Activate and set self-destruct timer when player is near
         if (collider.TryGetComponent<Player>(out Player player))
         {
-            if (!move) // Ensure timer only starts once
+            if (!move) 
             {
                 move = true;
+
+                // --- MERGED: Play the Bear Sound ---
+                if(AudioManager.instance != null) {
+                    AudioManager.instance.PlayBearSpeak(); 
+                }
+
                 Destroy(gameObject, 6f); 
-                Debug.Log(gameObject.name + " activated. Destroying in 3s.");
+                Debug.Log(gameObject.name + " activated. Destroying in 6s.");
             }
         }
-        // Destroy immediately if it hits an enemy or another bear
         else if (collider.TryGetComponent<Enemy>(out Enemy enemy) || collider.TryGetComponent<Bear>(out Bear bear))
         {
             Destroy(gameObject);

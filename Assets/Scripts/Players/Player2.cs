@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 namespace Players
 {
     public class Player2 : Player
@@ -16,11 +17,12 @@ namespace Players
         public override void Update()
         {
             base.Update();
-            if (scared)
+            
+            if (scared || win)
             {
                 return;
             }
-            base.Update();
+            
             if (Input.GetKey(KeyCode.LeftArrow) && haveLeft)
                 movement.x = -1;
             if (Input.GetKey(KeyCode.RightArrow) && haveRight)
@@ -35,8 +37,17 @@ namespace Players
 
         public void scare()
         {
-            scared = true;
-            rb.linearVelocity = Vector2.zero; // Stop movement immediately
+            // Only play the sound if they weren't ALREADY scared
+            if (!scared) 
+            {
+                scared = true;
+                rb.linearVelocity = Vector2.zero; // Stop movement immediately
+                
+                // Trigger the audio!
+                if(AudioManager.instance != null) {
+                    AudioManager.instance.PlayScaredSound();
+                }
+            }
         }
     }
 }

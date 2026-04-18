@@ -157,9 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c44f590f23e11f44a9c207f85037a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterBlink
-  blinkInterval: 0.2
+  fadeDuration: 0.8
   normalIntensity: 5
-  blinkIntensity: 0
+  dimIntensity: 0
 --- !u!1 &2126055390282240417
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +196,9 @@ Transform:
   m_LocalPosition: {x: -8.76, y: 3.05, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5942804263000915387}
+  - {fileID: 4206673041842157330}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7569647890188603647
@@ -411,12 +413,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   wallTilemap: {fileID: 0}
   player: {fileID: 0}
-  speed: 3
+  speed: 1
   pathUpdateRate: 0.3
   lockOnDistance: 3
   targetSpread: 2
   randomJitter: 0.2
   curiosity: 0.3
+  heartbeatDistance: 8
+  maxHeartbeatRate: 1.2
+  minHeartbeatRate: 0.3
 --- !u!114 &-3848576409793291581
 MonoBehaviour:
   m_ObjectHideFlags: 0

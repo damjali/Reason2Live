@@ -143,10 +143,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sfxSource: {fileID: 3293644147868762948}
-  useVoiceSFX: 0
   normalJantung: {fileID: 8300000, guid: 3b784d7caea741348a2f807e868fa8bd, type: 3}
   normalMedicine: {fileID: 8300000, guid: d919b17ac805b3946bb2c2d0301eaaa1, type: 3}
   normalMati: {fileID: 8300000, guid: a05ff0ba80408f240b2c800899e32de3, type: 3}
-  voiceJantung: {fileID: 8300000, guid: 21f17ee73665c6746bfbb42f103d758d, type: 3}
+  normalBearSpeak: {fileID: 8300000, guid: ea13f95844d1ebb47abb913928e7551f, type: 3}
+  normalScared: {fileID: 8300000, guid: 843cc0a6cd991854391e3a49544cd8d1, type: 3}
+  voiceJantung: {fileID: 8300000, guid: 5a8705809f563ec41950a963f9f12a81, type: 3}
   voiceMedicine: {fileID: 8300000, guid: 50028855f92c9e7488c91e66d3d86e75, type: 3}
-  voiceMati: {fileID: 8300000, guid: dd587755d738bce4b9ce158b450eacce, type: 3}
+  voiceMati: {fileID: 8300000, guid: adb5d63c304d65b4980fa2d03a62155f, type: 3}
+  voiceBearSpeak: {fileID: 8300000, guid: fe26f9c9864300b4f90c3e5a8e7a5f96, type: 3}
+  voiceScared: {fileID: 8300000, guid: 2c62b3d32276ef84cafb0ff2f2c459a2, type: 3}
