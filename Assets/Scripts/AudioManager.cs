@@ -45,6 +45,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMedicineSound()
     {
+        print("Makanmomomomom");
         AudioClip clipToPlay = useVoiceSFX ? voiceMedicine : normalMedicine;
         if(clipToPlay != null) sfxSource.PlayOneShot(clipToPlay);
     }
