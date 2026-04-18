@@ -2,38 +2,57 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // This makes it easy to call from ANY other script
     public static AudioManager instance;
 
     public AudioSource sfxSource;
 
-    [Header("Your Audio Clips")]
-    public AudioClip bunyiJantung;
-    public AudioClip collectMedicine; // Changed this!
-    public AudioClip bilaMati;
+    [Header("The Master Switch")]
+    public bool useVoiceSFX = false; // False = Normal, True = Your Voices
+
+    [Header("Normal Audio Clips")]
+    public AudioClip normalJantung;
+    public AudioClip normalMedicine;
+    public AudioClip normalMati;
+    // Add two more normal ones here to hit the 5 required!
+
+    [Header("Voice Audio Clips (Best SFX!)")]
+    public AudioClip voiceJantung;
+    public AudioClip voiceMedicine;
+    public AudioClip voiceMati;
+    // Add two more voice ones here!
 
     void Awake()
     {
-        // Set up the instance
         if (instance == null)
             instance = this;
+            
     }
 
-    // Call this when the heartbeat happens
+    // --- UI TOGGLE METHOD ---
+    // The UI button will call this to flip the switch
+    public void SetVoiceSFX(bool isToggled)
+    {
+        useVoiceSFX = isToggled;
+        Debug.Log("BEST SFX Mode is now: " + useVoiceSFX);
+    }
+
+    // --- PLAY METHODS ---
     public void PlayHeartbeat()
     {
-        sfxSource.PlayOneShot(bunyiJantung);
+        // Choose the clip based on the toggle
+        AudioClip clipToPlay = useVoiceSFX ? voiceJantung : normalJantung;
+        sfxSource.PlayOneShot(clipToPlay);
     }
 
-    // Call this when Player 1 touches the medicine
-    public void PlayMedicineSound() // Changed the name here!
+    public void PlayMedicineSound()
     {
-        sfxSource.PlayOneShot(collectMedicine); // And here!
+        AudioClip clipToPlay = useVoiceSFX ? voiceMedicine : normalMedicine;
+        sfxSource.PlayOneShot(clipToPlay);
     }
 
-    // Call this when Player 2 gets caught
     public void PlayDeathSound()
     {
-        sfxSource.PlayOneShot(bilaMati);
+        AudioClip clipToPlay = useVoiceSFX ? voiceMati : normalMati;
+        sfxSource.PlayOneShot(clipToPlay);
     }
 }
