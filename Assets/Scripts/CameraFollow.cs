@@ -13,6 +13,8 @@ public class CameraFollow : MonoBehaviour
     void Start()
     {
         Camera camera = GetComponent<Camera>();
+        Vector2 initialPos = transform.position;
+        GetComponent<Transform>().position = initialPos;
         camHeight = camera.orthographicSize;
         camWidth = camHeight * camera.aspect;
     }
