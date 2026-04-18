@@ -671,6 +671,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SFX_Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4227030364689367748, guid: 06a03b60d20401e44b8871b8679e38f6, type: 3}
+      propertyPath: voiceMati
+      value: 
+      objectReference: {fileID: 8300000, guid: adb5d63c304d65b4980fa2d03a62155f, type: 3}
     - target: {fileID: 9022295539225642181, guid: 06a03b60d20401e44b8871b8679e38f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 862.21466

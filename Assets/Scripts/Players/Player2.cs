@@ -16,7 +16,7 @@ namespace Players
         public override void Update()
         {
             base.Update();
-            if (scared)
+            if (scared || win)
             {
                 return;
             }

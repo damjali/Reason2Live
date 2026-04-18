@@ -4,6 +4,7 @@ namespace Players
 {
     public class Player : MonoBehaviour
     {
+        protected bool win = false;
         [Header("Movement Settings")]
         public float moveSpeed = 5f;
 
@@ -30,6 +31,7 @@ namespace Players
 
         public virtual void Update()
         {
+            
             if (!originSaved)
             {
                 originX = transform.position.x;
@@ -70,6 +72,14 @@ namespace Players
         public void reset()
         {
             rb.position = new Vector2(originX, originY);
+            
+        }
+        
+        public void won()
+        {
+            win = true;
+            GetComponent<SpriteRenderer>().color = Color.clear;
+            GetComponent<Collider2D>().enabled = false;
         }
     }
 }
