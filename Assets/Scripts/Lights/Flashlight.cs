@@ -11,7 +11,7 @@ public class Flashlight : MonoBehaviour
     [Header("Battery Settings")]
     public float maxBattery = 100f;
     public float currentBattery; // Ini nilai bateri semasa
-    public float drainRate = 2f; // Kelajuan bateri turun
+    public float drainRate = 100f; // Kelajuan bateri turun
 
     [Header("Flashlight Settings")]
     public float maxRadius = 20f;
