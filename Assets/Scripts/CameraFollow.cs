@@ -12,8 +12,9 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        camHeight = Camera.main.orthographicSize;
-        camWidth = camHeight * Camera.main.aspect;
+        Camera camera = GetComponent<Camera>();
+        camHeight = camera.orthographicSize;
+        camWidth = camHeight * camera.aspect;
     }
 
     void LateUpdate()
