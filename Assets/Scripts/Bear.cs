@@ -3,15 +3,15 @@ using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 using System.Linq;
 using Players;
-using UnityEngine.Serialization;
 
 public class Bear : MonoBehaviour
 {
     public LevelManager levelManager;
+    
     [Header("References")]
     public Tilemap wallTilemap;
-    private Transform target;
     public Transform exit;
+    private Transform target;
 
     [Header("Movement")]
     public float speed = 3f;
@@ -40,35 +40,36 @@ public class Bear : MonoBehaviour
     private Rigidbody2D rb;
     private bool originSaved = false;
     private bool move = false;
-    void Awake(){
-         rb = GetComponent<Rigidbody2D>();
-         
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
     }
     
     void Start()
     {
-       List<Enemy> enemies = levelManager.enemies;
-       int r1 = Random.Range(0, 2);
-       if (r1 == 0)
-       {
-           r1 = Random.Range(0, enemies.Count);
-           target = enemies[r1].transform;
-       }
-       else
-       {
-           target = exit;
-       }
-       
+        // Target selection logic: 50/50 chance between a random enemy or the exit
+        int r1 = Random.Range(0, 2);
+        
+        if (r1 == 0 && levelManager != null && levelManager.enemies.Count > 0)
+        {
+            int randomIndex = Random.Range(0, levelManager.enemies.Count);
+            target = levelManager.enemies[randomIndex].transform;
+        }
+        else
+        {
+            target = exit;
+        }
         if (wallTilemap != null) CreateGridFromTilemap();
         
         individualSpeed = speed + Random.Range(-0.5f, 0.5f);
 
-        // Optional: If originX/Y are 0, save the current position as origin
-        if (originX == 0 && originY == 0)
+        // Save original position for reset logic
+        if (!originSaved)
         {
-            Vector2Int startGrid = WorldToGrid(transform.position);
-            originX = startGrid.x;
-            originY = startGrid.y;
+            originX = transform.position.x;
+            originY = transform.position.y;
+            originSaved = true;
         }
     }
 
@@ -90,15 +91,9 @@ public class Bear : MonoBehaviour
 
     void Update()
     {
-        if (!move)
-            return;
+        // Only run logic if the player has triggered the movement
+        if (!move) return;
         
-        if (!originSaved)
-            {
-                originX = transform.position.x;
-                originY = transform.position.y;
-                originSaved = true;
-            }
         if (target == null || grid == null) return;
 
         timer -= Time.deltaTime;
@@ -114,12 +109,12 @@ public class Bear : MonoBehaviour
     void GeneratePath()
     {
         Vector2Int start = WorldToGrid(transform.position);
-        Vector2Int playerGridPos = WorldToGrid(target.position);
-        float distanceToPlayer = Vector2.Distance(transform.position, target.position);
+        Vector2Int targetGridPos = WorldToGrid(target.position);
+        float distanceToTarget = Vector2.Distance(transform.position, target.position);
     
-        Vector2Int finalTarget = (distanceToPlayer <= lockOnDistance) 
-            ? playerGridPos 
-            : GetRandomizedTarget(playerGridPos);
+        Vector2Int finalTarget = (distanceToTarget <= lockOnDistance) 
+            ? targetGridPos 
+            : GetRandomizedTarget(targetGridPos);
 
         if (start == finalTarget)
         {
@@ -173,6 +168,7 @@ public class Bear : MonoBehaviour
 
         if (Random.value < curiosity)
         {
+            // Shuffle neighbors for "curious" exploration
             for (int i = neighbors.Count - 1; i > 0; i--)
             {
                 int r = Random.Range(0, i + 1);
@@ -181,6 +177,7 @@ public class Bear : MonoBehaviour
         }
         else
         {
+            // Sort by distance to target for efficient chasing
             neighbors = neighbors.OrderBy(n => Vector2Int.Distance(n, target)).ToList();
         }
 
@@ -193,7 +190,6 @@ public class Bear : MonoBehaviour
 
     void FollowPath()
     {
-        // Safety: Don't move if there's no path
         if (currentPath == null || currentPath.Count == 0 || pathIndex >= currentPath.Count) return;
 
         transform.position = Vector3.MoveTowards(transform.position, currentTargetWithJitter, individualSpeed * Time.deltaTime);
@@ -215,12 +211,10 @@ public class Bear : MonoBehaviour
         currentTargetWithJitter = rawCenter + new Vector3(Random.Range(-jitter, jitter), Random.Range(-jitter, jitter), 0);
     }
 
-    public void reset()
+    public void ResetBear()
     {
-        // 1. Convert origin grid to world position
         Vector2 worldSpawn = new Vector2(originX, originY);
 
-        // 2. Stop physics momentum immediately
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
@@ -228,23 +222,18 @@ public class Bear : MonoBehaviour
             rb.position = worldSpawn;
         }
 
-        // 3. Teleport the transform
         transform.position = worldSpawn;
-
-        // 4. Wipe the AI's memory of its old path
+        move = false; // Stop movement on reset
         clearPath();
-        
-        Debug.Log(gameObject.name + " reset successfully.");
     }
 
     private void clearPath()
     {
         currentPath.Clear();
         pathIndex = 0;
-        timer = 0; // Forces GeneratePath() to run on the next Update()
+        timer = 0; 
     }
 
-    // Helper Functions
     Vector2Int GetRandomizedTarget(Vector2Int baseTarget)
     {
         Vector2Int pot = baseTarget + new Vector2Int(Random.Range(-targetSpread, targetSpread + 1), Random.Range(-targetSpread, targetSpread + 1));
@@ -267,12 +256,17 @@ public class Bear : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        print("Something happened");
+        // Activate and set self-destruct timer when player is near
         if (collider.TryGetComponent<Player>(out Player player))
         {
-            move = true;
+            if (!move) // Ensure timer only starts once
+            {
+                move = true;
+                Destroy(gameObject, 6f); 
+                Debug.Log(gameObject.name + " activated. Destroying in 3s.");
+            }
         }
-        
+        // Destroy immediately if it hits an enemy or another bear
         else if (collider.TryGetComponent<Enemy>(out Enemy enemy) || collider.TryGetComponent<Bear>(out Bear bear))
         {
             Destroy(gameObject);

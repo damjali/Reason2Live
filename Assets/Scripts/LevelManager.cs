@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     public Player1 player1;
     public Player2 player2;
     public List<Enemy> enemies;
+    public List<Bear> bears;
     private List<MonsterBlink> monsterBlinks = new List<MonsterBlink>();
     
 
