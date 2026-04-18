@@ -1,10 +1,40 @@
 fileFormatVersion: 2
-guid: 0021cfc0261fcb94aaa87a3a85279ca0
+guid: b09b4b6fda963624682fc6bbb058ffdd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6893492637848347474
-    second: Character1StandingBack_0
+      213: 2940991591487287096
+    second: Character1WestWalk_0
+  - first:
+      213: -3040067763402708369
+    second: Character1WestWalk_1
+  - first:
+      213: 5014527792056063037
+    second: Character1WestWalk_2
+  - first:
+      213: -8868236063307677284
+    second: Character1WestWalk_3
+  - first:
+      213: 8582085369319115328
+    second: Character1WestWalk_4
+  - first:
+      213: 8890412878171663955
+    second: Character1WestWalk_5
+  - first:
+      213: -2656311422156565114
+    second: Character1WestWalk_6
+  - first:
+      213: -4871485198195937590
+    second: Character1WestWalk_7
+  - first:
+      213: 1430840619682821904
+    second: Character1WestWalk_8
+  - first:
+      213: -350631436224681946
+    second: Character1WestWalk_9
+  - first:
+      213: 3863078363839004502
+    second: Character1WestWalk_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +143,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character1StandingBack_0
+      name: Character1WestWalk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 191
-        width: 165
+        x: 15
+        y: 190
+        width: 112
         height: 146
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -128,85 +158,63 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 253a8b4e70b9aaf50800000000000000
-      internalID: 6893492637848347474
+      spriteID: 83fa20a354080d820800000000000000
+      internalID: 2940991591487287096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character1StandingBack_2
+      name: Character1WestWalk_1
       rect:
         serializedVersion: 2
-        x: 343
-        y: 192
-        width: 162
-        height: 146
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d73f4645213b554aab15e9d586bd50f
-      internalID: 1648609616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character1StandingBack_1
-      rect:
-        serializedVersion: 2
-        x: 174
+        x: 198
         y: 191
-        width: 158
-        height: 146
+        width: 92
+        height: 145
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fb3f9b795f91c414bb4cb08cf6557d12
-      internalID: -2036905564
+      spriteID: f6ae345e9728fc5d0800000000000000
+      internalID: -3040067763402708369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character1StandingBack_3
+      name: Character1WestWalk_2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 192
-        width: 164
-        height: 142
+        x: 364
+        y: 193
+        width: 93
+        height: 144
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d6c596a19b8d61f4093f0c6950025d4c
-      internalID: -81175942
+      spriteID: d3453d1757e279540800000000000000
+      internalID: 5014527792056063037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character1StandingBack_4
+      name: Character1WestWalk_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 20
-        width: 165
+        x: 538
+        y: 190
+        width: 94
         height: 147
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -214,65 +222,43 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1635434af3bf8174cbf510a9b9d71722
-      internalID: 170103896
+      spriteID: c91cc3e4942bde480800000000000000
+      internalID: -8868236063307677284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character1StandingBack_5
+      name: Character1WestWalk_4
       rect:
         serializedVersion: 2
-        x: 173
-        y: 18
-        width: 159
-        height: 147
+        x: 28
+        y: 17
+        width: 97
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c5f06b2e4bd97aa43ad453bc139cd1c2
-      internalID: -100665132
+      spriteID: 04ac75e6c21b91770800000000000000
+      internalID: 8582085369319115328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character1StandingBack_6
+      name: Character1WestWalk_5
       rect:
         serializedVersion: 2
-        x: 341
-        y: 20
-        width: 161
-        height: 147
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b07c17cf3cd0e004286b673b1fce713a
-      internalID: 1223049842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character1StandingBack_7
-      rect:
-        serializedVersion: 2
-        x: 511
-        y: 16
-        width: 165
+        x: 195
+        y: 17
+        width: 100
         height: 151
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -280,10 +266,54 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 05105a701a23ecc449f5fb981a522bca
-      internalID: -49628607
+      spriteID: 35eeaf5c867116b70800000000000000
+      internalID: 8890412878171663955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character1WestWalk_6
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 16
+        width: 124
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6859b85d5d2e22bd0800000000000000
+      internalID: -2656311422156565114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character1WestWalk_7
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 16
+        width: 96
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace25f0c502056cb0800000000000000
+      internalID: -4871485198195937590
       vertices: []
       indices: 
       edges: []
@@ -292,7 +322,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3a3f60146fbabcc46b86cfd5839af68b
+    spriteID: 33adbe24ec85f3e449279590d983bfd8
     internalID: 0
     vertices: []
     indices: 
@@ -304,14 +334,14 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":169.0,"y":184.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Character1StandingBack_0: 6893492637848347474
-      Character1StandingBack_1: -2036905564
-      Character1StandingBack_2: 1648609616
-      Character1StandingBack_3: -81175942
-      Character1StandingBack_4: 170103896
-      Character1StandingBack_5: -100665132
-      Character1StandingBack_6: 1223049842
-      Character1StandingBack_7: -49628607
+      Character1WestWalk_0: 2940991591487287096
+      Character1WestWalk_1: -3040067763402708369
+      Character1WestWalk_2: 5014527792056063037
+      Character1WestWalk_3: -8868236063307677284
+      Character1WestWalk_4: 8582085369319115328
+      Character1WestWalk_5: 8890412878171663955
+      Character1WestWalk_6: -2656311422156565114
+      Character1WestWalk_7: -4871485198195937590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
