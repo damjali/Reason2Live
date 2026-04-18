@@ -526,6 +526,7 @@ GameObject:
   - component: {fileID: 1601618452}
   - component: {fileID: 1601618451}
   - component: {fileID: 1601618453}
+  - component: {fileID: 1601618454}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -708,6 +709,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1601618454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601618449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8f077ff7a9c9e4093eb862f3307121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextHoverEffect
+  normalColor: {r: 0.6, g: 0, b: 0, a: 1}
+  hoverColor: {r: 1, g: 0.2, b: 0.2, a: 1}
 --- !u!1001 &8697545445351399836
 PrefabInstance:
   m_ObjectHideFlags: 0
