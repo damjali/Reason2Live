@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     public List<Enemy> enemies;
     public List<Bear> bears;
     private List<MonsterBlink> monsterBlinks = new List<MonsterBlink>();
-    
+    public GameObject secretDoor;
 
     void Start()
     {
@@ -105,5 +105,10 @@ public class LevelManager : MonoBehaviour
             player2.haveDown = false;
             player1.haveDown = true;
         }
+    }
+
+    public void spawnExit()
+    {
+        Instantiate(secretDoor, new Vector2((float)-32.95, (float)-29.19), Quaternion.identity);
     }
 }

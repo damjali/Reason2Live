@@ -1,5 +1,6 @@
 using Players;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathArea : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class DeathArea : MonoBehaviour
         print("Something entered");
         if (collision.TryGetComponent<Player>(out Player player))
         {   
-            AudioManager.instance.PlayDeathSound();
-            levelManager.resetLevel();
+            // AudioManager.instance.PlayDeathSound();
+            SceneManager.LoadScene("Scenes/Died Page");
         }
     }
 }
