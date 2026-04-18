@@ -97,7 +97,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -200,8 +200,8 @@ MonoBehaviour:
     y: 0
     width: 291.2
     height: 490.4
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -247,14 +247,11 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 148.6}
       m_SelectedIDs:
-      - m_Data: 118892
-      - m_Data: 118902
-      - m_Data: 118818
-      - m_Data: 118878
+      - m_Data: 118706
       m_LastClickedID:
-        m_Data: 118878
+        m_Data: 118706
       m_ExpandedIDs:
       - m_Data: -726516
       - m_Data: -719826
@@ -1215,12 +1212,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 118892
-    - m_Data: 118902
-    - m_Data: 118818
-    - m_Data: 118878
+    - m_Data: 118706
     m_LastClickedEntityId:
-      m_Data: 118878
+      m_Data: 118706
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_Data: 103122
@@ -1312,8 +1306,8 @@ MonoBehaviour:
     y: 0
     width: 366.40002
     height: 716.8
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
