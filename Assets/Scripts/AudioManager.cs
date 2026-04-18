@@ -13,13 +13,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip normalJantung;
     public AudioClip normalMedicine;
     public AudioClip normalMati;
-    // Add two more normal ones here to hit the 5 required!
+    public AudioClip normalBearSpeak; // Added Bear
 
     [Header("Voice Audio Clips (Best SFX!)")]
     public AudioClip voiceJantung;
     public AudioClip voiceMedicine;
     public AudioClip voiceMati;
-    // Add two more voice ones here!
+    public AudioClip voiceBearSpeak; // Added Bear
 
     void Awake()
     {
@@ -29,7 +29,6 @@ public class AudioManager : MonoBehaviour
     }
 
     // --- UI TOGGLE METHOD ---
-    // The UI button will call this to flip the switch
     public void SetVoiceSFX(bool isToggled)
     {
         useVoiceSFX = isToggled;
@@ -39,7 +38,6 @@ public class AudioManager : MonoBehaviour
     // --- PLAY METHODS ---
     public void PlayHeartbeat()
     {
-        // Choose the clip based on the toggle
         AudioClip clipToPlay = useVoiceSFX ? voiceJantung : normalJantung;
         sfxSource.PlayOneShot(clipToPlay);
     }
@@ -54,5 +52,12 @@ public class AudioManager : MonoBehaviour
     {
         AudioClip clipToPlay = useVoiceSFX ? voiceMati : normalMati;
         sfxSource.PlayOneShot(clipToPlay);
+    }
+
+    // Added Bear Play Method
+    public void PlayBearSpeak()
+    {
+        AudioClip clipToPlay = useVoiceSFX ? voiceBearSpeak : normalBearSpeak;
+        if(clipToPlay != null) sfxSource.PlayOneShot(clipToPlay);
     }
 }
