@@ -2,27 +2,32 @@
 
 namespace Players
 {
-    public class Player  : MonoBehaviour
+    public class Player : MonoBehaviour
     {
-        
-        public bool haveUp {get; set;}
-        public bool haveDown{get;set;}
-        public bool haveLeft{get;set;}
-        public bool haveRight{get;set;} 
-        
-        private float originX=3;
-        private float originY=3;
-        
+        [Header("Movement Settings")]
         public float moveSpeed = 5f;
-        private Rigidbody2D rb;
 
+        [Header("Abilities")]
+        // Changed to public fields so they appear in the Inspector for easy debugging
+        public bool haveUp = true;
+        public bool haveDown = true;
+        public bool haveLeft = true;
+        public bool haveRight = true;
+
+        protected Rigidbody2D rb;
+        protected Animator anim; 
         protected Vector2 movement;
+
+        private float originX;
+        private float originY;
         private bool originSaved = false;
-        void Awake()
+
+        protected virtual void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
+            anim = GetComponent<Animator>();
         }
-        
+
         public virtual void Update()
         {
             if (!originSaved)
@@ -30,20 +35,39 @@ namespace Players
                 originX = transform.position.x;
                 originY = transform.position.y;
                 originSaved = true;
-                Debug.Log($"Origin captured at: {originX}, {originY}");
             }
+
+            // Reset movement vector every frame
             movement = Vector2.zero;
         }
-        void FixedUpdate()  
+
+        protected virtual void FixedUpdate()
         {
-            rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+            // Move the Rigidbody
+            if (movement.sqrMagnitude > 0)
+            {
+                rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+            }
+        }
+
+        protected void UpdateAnimations()
+        {
+            if (anim != null)
+            {
+                bool isMoving = movement.sqrMagnitude > 0;
+                anim.SetBool("IsMoving", isMoving);
+
+                // IMPORTANT: Only update MoveX and MoveY if we are actually moving
+                // This allows the Blend Tree to stay in the last faced direction when idle
+                if (isMoving)
+                {
+                    anim.SetFloat("MoveX", movement.x);
+                    anim.SetFloat("MoveY", movement.y);
+                }
+            }
         }
 
         public void reset()
-        {
-            resetPosition();
-        }
-        private void resetPosition()
         {
             rb.position = new Vector2(originX, originY);
         }

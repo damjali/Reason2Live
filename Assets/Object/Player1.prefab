@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Players.Player1
   moveSpeed: 10
-  rb: {fileID: 6561166154922932107}
 --- !u!95 &4258656385507764017
 Animator:
   serializedVersion: 7
