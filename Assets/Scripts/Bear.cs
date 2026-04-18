@@ -49,8 +49,8 @@ public class Bear : MonoBehaviour
     void Start()
     {
         // Target selection logic: 50/50 chance between a random enemy or the exit
-        int r1 = Random.Range(0, 2);
-        
+        int r1 = Random.Range(1, 2);
+        print("I got " + r1);
         if (r1 == 0 && levelManager != null && levelManager.enemies.Count > 0)
         {
             int randomIndex = Random.Range(0, levelManager.enemies.Count);
@@ -262,7 +262,7 @@ public class Bear : MonoBehaviour
             if (!move) // Ensure timer only starts once
             {
                 move = true;
-                Destroy(gameObject, 6f); 
+                Destroy(gameObject, 12f); 
                 Debug.Log(gameObject.name + " activated. Destroying in 3s.");
             }
         }

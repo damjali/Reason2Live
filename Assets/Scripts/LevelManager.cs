@@ -109,6 +109,7 @@ public class LevelManager : MonoBehaviour
 
     public void spawnExit()
     {
-        Instantiate(secretDoor, new Vector2((float)-32.95, (float)-29.19), Quaternion.identity);
+        print("spawm");
+        Instantiate(secretDoor, new Vector2((float)-10.48, (float)-27.7), Quaternion.identity);
     }
 }

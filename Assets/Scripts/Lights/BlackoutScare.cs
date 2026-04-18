@@ -17,7 +17,7 @@ public class BlackoutScare : MonoBehaviour
     void Awake()
     {   
         playerSpotlight = GetComponent<Flashlight>();
-        // globalLight.intensity = 0f;
+        globalLight.intensity = 0f;
         p2 = GetComponentInParent<Player2>();
     }
 

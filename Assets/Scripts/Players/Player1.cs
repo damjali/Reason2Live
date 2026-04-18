@@ -18,6 +18,10 @@ namespace Players
         {
             // 1. Reset movement vector in base class
             base.Update();
+            if (win)
+            {
+                return;
+            }
 
             // 2. Capture Keyboard Input (WASD)
             if (Input.GetKey(KeyCode.A) && haveLeft)

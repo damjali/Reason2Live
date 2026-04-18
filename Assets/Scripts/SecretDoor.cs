@@ -12,16 +12,16 @@ public class SecretDoor : MonoBehaviour
         if (collider.TryGetComponent<Player1>(out Player1 p1))
         {   
             p1Pass = true;
-            Destroy(p1);
+            p1.won();
         }
 
         if (collider.TryGetComponent<Player2>(out Player2 p2))
         {
             p2Pass = true;
-            Destroy(p2);
+            p2.won();
         }
 
-        if (p1 && p2)
+        if (p1Pass && p2Pass)
         {
             SceneManager.LoadScene("Scenes/End Page");
         }
