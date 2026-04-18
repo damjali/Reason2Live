@@ -13,19 +13,20 @@ public class AudioManager : MonoBehaviour
     public AudioClip normalJantung;
     public AudioClip normalMedicine;
     public AudioClip normalMati;
-    public AudioClip normalBearSpeak; // Added Bear
+    public AudioClip normalBearSpeak; 
+    public AudioClip normalScared; // 5th Sound!
 
     [Header("Voice Audio Clips (Best SFX!)")]
     public AudioClip voiceJantung;
     public AudioClip voiceMedicine;
     public AudioClip voiceMati;
-    public AudioClip voiceBearSpeak; // Added Bear
+    public AudioClip voiceBearSpeak; 
+    public AudioClip voiceScared; // 5th Sound!
 
     void Awake()
     {
         if (instance == null)
             instance = this;
-            
     }
 
     // --- UI TOGGLE METHOD ---
@@ -39,25 +40,31 @@ public class AudioManager : MonoBehaviour
     public void PlayHeartbeat()
     {
         AudioClip clipToPlay = useVoiceSFX ? voiceJantung : normalJantung;
-        sfxSource.PlayOneShot(clipToPlay);
+        if(clipToPlay != null) sfxSource.PlayOneShot(clipToPlay);
     }
 
     public void PlayMedicineSound()
     {
         AudioClip clipToPlay = useVoiceSFX ? voiceMedicine : normalMedicine;
-        sfxSource.PlayOneShot(clipToPlay);
+        if(clipToPlay != null) sfxSource.PlayOneShot(clipToPlay);
     }
 
     public void PlayDeathSound()
     {
         AudioClip clipToPlay = useVoiceSFX ? voiceMati : normalMati;
-        sfxSource.PlayOneShot(clipToPlay);
+        if(clipToPlay != null) sfxSource.PlayOneShot(clipToPlay);
     }
 
-    // Added Bear Play Method
     public void PlayBearSpeak()
     {
         AudioClip clipToPlay = useVoiceSFX ? voiceBearSpeak : normalBearSpeak;
+        if(clipToPlay != null) sfxSource.PlayOneShot(clipToPlay);
+    }
+
+    // NEW: Scared Sound
+    public void PlayScaredSound()
+    {
+        AudioClip clipToPlay = useVoiceSFX ? voiceScared : normalScared;
         if(clipToPlay != null) sfxSource.PlayOneShot(clipToPlay);
     }
 }
