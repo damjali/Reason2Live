@@ -152,9 +152,9 @@ TextureImporter:
       name: Character1StandingRight_0
       rect:
         serializedVersion: 2
-        x: 42
+        x: 21
         y: 190
-        width: 99
+        width: 120
         height: 147
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -196,9 +196,9 @@ TextureImporter:
       name: Character1StandingRight_4
       rect:
         serializedVersion: 2
-        x: 384
+        x: 362
         y: 192
-        width: 77
+        width: 114
         height: 145
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -240,9 +240,9 @@ TextureImporter:
       name: Character1StandingRight_9
       rect:
         serializedVersion: 2
-        x: 43
+        x: 20
         y: 19
-        width: 80
+        width: 123
         height: 152
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -284,9 +284,9 @@ TextureImporter:
       name: Character1StandingRight_11
       rect:
         serializedVersion: 2
-        x: 384
+        x: 362
         y: 21
-        width: 102
+        width: 124
         height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
