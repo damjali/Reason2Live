@@ -26,6 +26,12 @@ public class Enemy : MonoBehaviour
     [Range(0f, 1f)]
     public float curiosity = 0.3f;
 
+    [Header("Audio Settings (The Heartbeat)")]
+    public float heartbeatDistance = 8f; // How close before the heartbeat starts
+    public float maxHeartbeatRate = 1.2f; // Slow beat (when enemy is at the edge of the distance)
+    public float minHeartbeatRate = 0.3f; // Fast, frantic beat (when enemy is right next to you)
+    private float heartbeatTimer;
+
     [Header("Spawn Settings")]
     private float originX;
     private float originY;
@@ -66,6 +72,26 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if (player == null || grid == null) return;
+
+        // --- THE TENSION BUILDER (HEARTBEAT LOGIC) ---
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        
+        if (distanceToPlayer <= heartbeatDistance)
+        {
+            heartbeatTimer -= Time.deltaTime;
+            if (heartbeatTimer <= 0)
+            {
+                // Play the sound!
+                AudioManager.instance.PlayHeartbeat();
+                
+                // Calculate how close the monster is (0 = touching you, 1 = far away)
+                float distanceRatio = distanceToPlayer / heartbeatDistance;
+                
+                // Make the timer shorter (faster heartbeat) as the monster gets closer!
+                heartbeatTimer = Mathf.Lerp(minHeartbeatRate, maxHeartbeatRate, distanceRatio);
+            }
+        }
+        // ---------------------------------------------
 
         timer -= Time.deltaTime;
         if (timer <= 0)
