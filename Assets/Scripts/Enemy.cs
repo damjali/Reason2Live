@@ -38,8 +38,9 @@ public class Enemy : MonoBehaviour
 
     void Awake(){
          rb = GetComponent<Rigidbody2D>();
+         
     }
-
+    
     void Start()
     {
        

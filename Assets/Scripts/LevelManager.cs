@@ -7,13 +7,19 @@ public class LevelManager : MonoBehaviour
     public Player1 player1;
     public Player2 player2;
     public List<Enemy> enemies;
+    private List<MonsterBlink> monsterBlinks = new List<MonsterBlink>();
+    
 
     void Start()
     {
         foreach (Enemy e in enemies)
         {
             e.GetComponent<DeathArea>().levelManager = this;
+            monsterBlinks.Add(e.GetComponentInChildren<MonsterBlink>());
         }
+        
+            BlackoutScare blackoutScare = player2.GetComponentInChildren<BlackoutScare>();
+            blackoutScare.levelManager = this;
     }
     void Update()
     {
@@ -31,6 +37,23 @@ public class LevelManager : MonoBehaviour
             e.reset();
         }
     }
+
+    public void blinkMonster()
+    {
+        foreach(MonsterBlink b in monsterBlinks)
+         {
+             b.Blink();
+          }
+    }
+
+    public void stopBlink()
+    {
+        foreach (MonsterBlink b in monsterBlinks)
+        {
+            b.StopBlink();
+        }
+    }
+        
     
     private async void UpdatePlayerInput()
     {

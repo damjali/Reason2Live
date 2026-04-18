@@ -4,8 +4,10 @@ using UnityEngine.UI;
 
 public class Flashlight : MonoBehaviour
 {
-    [Header("Component")]
+    private BlackoutScare blackoutScare;
     private Light2D myLight;
+    
+    [Header("Component")]
     public Slider batteryBar;
 
     [Header("Battery Settings")]
@@ -17,9 +19,11 @@ public class Flashlight : MonoBehaviour
     public float maxRadius = 20f;
     public float minRadius = 1f;
 
-    void Start()
+    void Awake()
     {
         myLight = GetComponentInChildren<Light2D>();
+        blackoutScare = GetComponentInChildren<BlackoutScare>();
+        
         // 1. MULA DARI FULL (Start from full)
         currentBattery = maxBattery;
 
@@ -33,10 +37,23 @@ public class Flashlight : MonoBehaviour
 
     void Update()
     {
+        if (currentBattery <= 0)
+        {
+            if(!blackoutScare.triggered)
+                blackoutScare.triggered = true;
+            return;
+        }
+        
         // 2. BATERI SLOWLY TURUN (Decrease)
         // Di sinilah kod yang buat bateri berkurang setiap saat
         if (currentBattery > 0)
         {
+            if (blackoutScare.triggered)
+            {
+                blackoutScare.StopScareSequence();
+                blackoutScare.triggered = false;
+            }
+
             // Time.deltaTime buatkan ia turun secara smooth, bukan mengejut
             currentBattery -= drainRate * Time.deltaTime; 
         }
