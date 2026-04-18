@@ -30,7 +30,7 @@ public class BatteryPickup : MonoBehaviour
                 {
                     // Add battery to Player 2 by calling the public method we created earlier
                     player2Flashlight.AddBattery(batteryIncrease);
-                    AudioManager.instance.PlayMedicineSound();
+                    // AudioManager.instance.PlayMedicineSound();
                     // Destroy this medicine object so it disappears from the scene after collection
                     Destroy(gameObject);
                 }

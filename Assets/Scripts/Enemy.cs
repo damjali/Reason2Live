@@ -82,7 +82,7 @@ public class Enemy : MonoBehaviour
             if (heartbeatTimer <= 0)
             {
                 // Play the sound!
-                AudioManager.instance.PlayHeartbeat();
+                // AudioManager.instance.PlayHeartbeat();
                 
                 // Calculate how close the monster is (0 = touching you, 1 = far away)
                 float distanceRatio = distanceToPlayer / heartbeatDistance;
