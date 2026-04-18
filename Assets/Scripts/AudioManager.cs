@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource sfxSource;
 
     [Header("The Master Switch")]
-    public bool useVoiceSFX = false; // False = Normal, True = Your Voices
+    public static bool useVoiceSFX = false; // False = Normal, True = Your Voices
 
     [Header("Normal Audio Clips")]
     public AudioClip normalJantung;
