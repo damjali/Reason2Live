@@ -50,6 +50,7 @@ public class Bear : MonoBehaviour
     {
         // Target selection logic: 50/50 chance between a random enemy or the exit
         int r1 = Random.Range(0, 2);
+        
         if (r1 == 0 && levelManager != null && levelManager.enemies.Count > 0)
         {
             int randomIndex = Random.Range(0, levelManager.enemies.Count);
@@ -59,7 +60,6 @@ public class Bear : MonoBehaviour
         {
             target = exit;
         }
-        print(target);
         if (wallTilemap != null) CreateGridFromTilemap();
         
         individualSpeed = speed + Random.Range(-0.5f, 0.5f);

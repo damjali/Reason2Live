@@ -10,6 +10,7 @@ public class DeathArea : MonoBehaviour
         print("Something entered");
         if (collision.TryGetComponent<Player>(out Player player))
         {   
+            AudioManager.instance.PlayDeathSound();
             levelManager.resetLevel();
         }
     }
