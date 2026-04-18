@@ -15,6 +15,7 @@ namespace Players
         
         public override void Update()
         {
+            base.Update();
             if (scared)
             {
                 return;
@@ -28,6 +29,8 @@ namespace Players
                 movement.y = 1;
             if (Input.GetKey(KeyCode.DownArrow) && haveDown)
                 movement.y = -1;
+
+            UpdateAnimations();
         }
 
         public void scare()
