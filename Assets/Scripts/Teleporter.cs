@@ -9,6 +9,7 @@ public class Teleporter : MonoBehaviour
     public Camera cam2;
     public Camera cam1;
     public Transform target;
+    public LevelManager levelManager;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player2"))
@@ -23,6 +24,7 @@ public class Teleporter : MonoBehaviour
             cameraFollow2.minY = cameraFollow1.minY;
             cam2.GetComponent<Transform>().position = targetPosition;
             p2.position = targetPosition;
+            levelManager.spawnExit();
         }
     }
 }
