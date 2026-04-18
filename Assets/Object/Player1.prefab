@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4258656385507764017}
   m_Layer: 6
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1978832169979923489, guid: a5194eec01ff67540a21e9d11e4a6c74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -172,6 +172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Players.Player1
   moveSpeed: 10
+  haveUp: 1
+  haveDown: 1
+  haveLeft: 1
+  haveRight: 1
 --- !u!95 &4258656385507764017
 Animator:
   serializedVersion: 7
