@@ -1,6 +1,3 @@
-using System;
-using Players;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Teleporter : MonoBehaviour
