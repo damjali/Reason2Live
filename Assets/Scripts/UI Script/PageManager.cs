@@ -7,4 +7,20 @@ public class PageManager : MonoBehaviour
     {
         SceneManager.LoadScene("Scenes/Level 1");
     }
+
+    public static void loadInstruction2()
+    {
+        SceneManager.LoadScene("Scenes/Instruction2");
+    }
+
+    public static void loadInstruction1()
+    {
+        SceneManager.LoadScene("Scenes/Instruction2");
+    }
+
+
+    public static void loadInstruction3()
+    {
+        SceneManager.LoadScene("Scenes/Instruction3");
+    }
 }
