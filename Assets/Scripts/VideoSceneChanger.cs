@@ -27,6 +27,6 @@ public class VideoSceneChanger : MonoBehaviour
         videoPlayer.loopPointReached -= OnVideoFinished;
 
         // Load the target scene
-        SceneManager.LoadScene(nextSceneName);
+        SceneManager.LoadScene("MainMenu");
     }
 }

@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5059023975c6268409aaa1593b63a395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Battery
-  batteryIncrease: 30
+  batteryIncrease: 50
 --- !u!70 &6157159708650936388
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

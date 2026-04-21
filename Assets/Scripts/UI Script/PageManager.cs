@@ -15,12 +15,16 @@ public class PageManager : MonoBehaviour
 
     public static void loadInstruction1()
     {
-        SceneManager.LoadScene("Scenes/Instruction2");
+        SceneManager.LoadScene("Scenes/Instruction1");
     }
 
 
     public static void loadInstruction3()
     {
         SceneManager.LoadScene("Scenes/Instruction3");
+    }
+    public static void loadMainMenu()
+    {
+        SceneManager.LoadScene("Scenes/MainMenu");
     }
 }

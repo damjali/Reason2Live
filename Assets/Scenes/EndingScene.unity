@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tryagain
       objectReference: {fileID: 0}
+    - target: {fileID: 6522938389849869043, guid: 52a5bdabfebda4d44a4c549ddde69c7c, type: 3}
+      propertyPath: m_text
+      value: Play Again
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
