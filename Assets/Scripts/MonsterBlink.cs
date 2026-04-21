@@ -16,6 +16,7 @@ public class MonsterBlink : MonoBehaviour
     {
         monsterLight = GetComponent<Light2D>();
         //Xayne typeshi
+        //Hazim was here
     }
 
     public void Blink()
