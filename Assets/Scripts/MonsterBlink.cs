@@ -15,6 +15,7 @@ public class MonsterBlink : MonoBehaviour
     void Awake()
     {
         monsterLight = GetComponent<Light2D>();
+        //Xayne typeshi
     }
 
     public void Blink()
